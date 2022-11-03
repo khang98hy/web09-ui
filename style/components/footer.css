@@ -1,0 +1,8 @@
+.content-footer {
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    height: 56px;
+}
+
+.content-footer > * {
+    margin-left: 20px !important;
+}

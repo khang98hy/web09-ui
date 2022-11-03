@@ -1,0 +1,28 @@
+@import "../components/input.css";
+@import "../components/button.css";
+
+.content-toolbar {
+    display: flex;
+    justify-content: space-between;
+    height: 46px;
+}
+
+.toolbar-right {
+    display: flex;
+}
+
+.multi-delete {
+    width: 120px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.multi-delete > span {
+    padding-left: 12px;
+}

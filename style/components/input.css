@@ -1,0 +1,59 @@
+.m-input {
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+
+.m-input-search {
+    position: relative;
+}
+
+.m-input-date {
+    width: 150px;
+    position: relative;
+}
+
+.m-input-date > input {
+    padding: 8px;
+    width: 100%;
+}
+
+.m-input-error {
+    border: 1px solid var(--red);
+}
+
+.m-input-date > img {
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    border-left: 2px solid var(--line-grid-panel);
+    right: 0;
+}
+
+.m-input-search input {
+    min-width: 250px;
+}
+
+#input-phone-number:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+#input-email:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+.m-input-search input:focus {
+    border: 1px solid var(--main-color);
+}
+
+.search-icon {
+    margin: 4px 0;
+    padding: 0 4px;
+    position: absolute;
+    right: 0;
+    border-left: 2px solid var(--line-grid-panel);
+}

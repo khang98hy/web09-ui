@@ -1,0 +1,166 @@
+@import "./layouts/container.css";
+@import "./layouts/sidebar.css";
+@import "./components/loading.css";
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../assets/Fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Italic;
+  src: url(../assets/Fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../assets/Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Semibold;
+  src: url(../assets/Fonts/OpenSans-Semibold.ttf);
+}
+
+:root {
+  --main-color: #03ae66;
+  --sidebar-color: #24344b;
+  --shadow-color: #d5d5d5;
+  --hover-grid-line: #e5f3ff;
+  --focus-grid-line: #cce8ff;
+  --header-grid-panel: #f5f6fa;
+  --red: #fa3939;
+  --background: #eaecef;
+  --line-grid-panel: #d5d8e6;
+  --border-color: #cecece;
+  --border-input: #cccccc;
+  --link-color: #0997EB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: OpenSans-Regular;
+  margin: 0;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-cross-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-main-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px #d5d5d5;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 16px;
+  font-family: OpenSans-Semibold;
+}
+
+.sub-title {
+  font-size: 14px;
+  font-family: OpenSans-Regular;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(239 239 244);
+  background-color: #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #afafaf;
+  width: 6px;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.m-input:before {
+  position: absolute;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  content: attr(data-date);
+  display: inline-block;
+  color: black;
+}
+
+.m-input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+  display: none;
+}
+
+.m-input::-webkit-calendar-picker-indicator {
+  background: url("/assets/Icons/ic_date.svg") center/80% no-repeat;
+  background-position: -1x 2px;
+  position: absolute;
+  right: 0;
+  color: black;
+}

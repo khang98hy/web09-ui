@@ -1,0 +1,70 @@
+.btn {
+    padding: 12px;
+    margin: 0 0 0 8px;
+    height: 32px;
+    min-width: 96px;
+    font-family: OpenSans-Semibold;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 8px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.btn-style1 {
+    background-color: var(--main-color);
+    border: 0;
+    color: white;
+}
+
+.btn-style1:hover {
+    background-color: #02BF70;
+}
+
+.btn-style1:disabled {
+    background-color: #e0e0e0;
+    color: #a6a6a6;
+}
+
+.btn-style2 {
+    background-color: #ffffff;
+    color: #3d3f4e;
+    border: 1px solid #cecece;
+}
+
+.btn-style2:hover {
+    background-color: #eaecef;
+}
+
+.btn-style4 {
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    color: #3d3f4e;
+    border: 1px solid #cecece;
+}
+
+.btn-style4:hover {
+    background-color: #f8f8f8;
+}
+
+.modal__btn-close:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+#btn-save-update:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+
+#btn-save-add:focus {
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}

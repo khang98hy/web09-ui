@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <div class="main flex">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="/assets/Icons/ic_IconThietBi.svg" alt="" class="logo-icon">
+                    <h4 class="logo-title">Thiết bị</h4>
+                </div>
+                <img src="/assets//Icons/ic_navigation.svg" alt="" class="btn-navigate">
+            </div>
+            <div class="sidebar-menu">
+                <div class="sidebar-item margin-top">
+                    <img src="/assets/Icons/ic_TongQuan.svg" alt="">
+                    <p class="item-title">Tổng quan</p>
+                </div>
+                <div class="sidebar-item">
+                    <img src="/assets/Icons/ic_ThietBi.svg" alt="">
+                    <p class="item-title">Thiết bị</p>
+                </div>
+                <div class="sidebar-item">
+                    <img src="/assets/Icons/ic_MuonTra.svg" alt="">
+                    <p class="item-title">Mượn trả</p>
+                </div>
+                <div class="sidebar-item">
+                    <img src="/assets/Icons/ic_BaoCao.svg" alt="">
+                    <p class="item-title">Báo cáo</p>
+                </div>
+                <div class="sidebar-item item-active">
+                    <img src="/assets/Icons/ic_HeThong.svg" alt="">
+                    <p class="item-title">Hệ thống</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="header-left">
+                    <span class="sub-title">Cán bộ, giáo viên</span>
+                    <img src="/assets/Icons/ic_help.svg" alt="">
+                </div>
+                <div class="header-right">
+                    <div class="notification">
+                        <img src="/assets/Icons/ic_Notification_32.png" alt="" class="icon-notification">
+                        <div class="new-notification"></div>
+                    </div>
+                    <div class="profile">
+                        <span class="profile-name">Admin</span>
+                        <img src="./assets//Icons/icon_down-arrow-small.svg"
+                            class="profile-icon-more cursor-pointer"></img>
+                        <img src="./assets/Icons/ic_Avatar_36.png" class="profile-avatar cursor-pointer"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="no-data">
+                <img src="/assets/Icons/ic_Alert.png" alt="">
+                <span class="title">Chưa có giáo viên</span>
+                <span>Vui lòng chọn Thêm mới từng giáo viên hoặc Nhập khẩu để lấy danh sách hiện có tại trường.</span>
+                <div class="btn-wrap">
+                    <button class="btn btn-style1 btn-add">Thêm mới</button>
+                    <button class="btn btn-style1">Nhập khẩu</button>
+                </div>
+            </div>
+            <div class="content hide">
+                <div class="content-toolbar">
+                    <div class="toolbar-left">
+                        <div class="m-input-search">
+                            <input type="text" class="m-input">
+                            <img src="/assets/Icons/Ic_seerch.png" alt="" class="search-icon">
+                        </div>
+                    </div>
+                    <div class="toolbar-right">
+                        <button class="btn btn-style1 btn-add">Thêm</button>
+                        <button class="btn btn-style2">Xuất khẩu</button>
+                        <div id="toolbar-btn-more" class="btn btn-style4 relative">
+                            <img src="./assets/Icons/ic_More.png" alt="">
+                            <div class="multi-delete shadow hide">
+                                <img src="/assets/Icons/ic_delete.png" alt="">
+                                <span>Xóa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th class="column-checkbox">
+                                    <input id="select-all" type="checkbox" name="" class="m-checkbox">
+                                </th>
+                                <th class="column-teacher-code">Số hiệu cán bộ</th>
+                                <th class="column-teacher-name">Họ và tên</th>
+                                <th class="w-100">Số điện thoại</th>
+                                <th class="w-150">Tổ chuyên môn</th>
+                                <th title="Quản lý theo môn" class="w-100">QL theo môn</th>
+                                <th title="Quản lý kho, phòng" class="w-150">QL kho, phòng</th>
+                                <th title="Đào tạo quản lý thiết bị" class="w-70">Đào tạo QLTB</th>
+                                <th class="w-70">Đang làm việc</th>
+                                <th class="column-edit"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- emty -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-footer flex-cross-center">
+                    <img src="./assets/Icons/ic_MoveToFirst.png" alt="">
+                    <img src="./assets//Icons/ic_Back.png" alt="">
+                    <button class="btn btn-style2" style="min-width: 64px;">1</button>
+                    <img src="./assets/Icons/ic_Next.png" alt="">
+                    <img src="./assets//Icons/ic_MoveToLast.png" alt="">
+                    <span>1/10 trang (<b>500</b> kết quả)</span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="loading hide">
+            <div class="loading__inner">
+                <div class="loading--animation">
+                    <div class="circle circle--red"></div>
+                    <div class="circle circle--orange"></div>
+                    <div class="circle circle--yellow"></div>
+                    <div class="circle circle--green"></div>
+                </div>
+                <span>Đang tải</span>
+            </div>
+        </div>
+        <div id="modal-add" class="modal hide">
+            <div class="flex-center">
+                <div class="modal__inner modal__inner--add">
+                    <img src="./assets/Icons/ic_X_2.png" class="modal-close cursor-pointer" alt="">
+                    <div id="modal-content-add" class="modal-content">
+                        <div class="modal-content__left" id="modal-left">
+                            <img src="/assets/Images/default_avatar.png" alt="">
+                            <div class="btn-choose-file">Chọn ảnh</div>
+                            <div id="display-teacher-name" style="text-align: center;">Họ và tên</div>
+                            <div id="display-teacher-code" style="text-align: center;">Số hiệu cán bộ</div>
+                        </div>
+                        <div class="modal-content__right">
+                            <span class="modal__title"></span>
+                            <form class="form-wrapper">
+                                <div class="form-group">
+                                    <label for="input-teacher-code">Số hiệu cán bộ<span
+                                            style="color: red;">*</span></label>
+                                    <input id="input-teacher-code" type="text" class="m-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Họ và tên<span style="color: red;">*</span></label>
+                                    <input id="input-teacher-name" type="text" class="m-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Số điện thoại</label>
+                                    <input id="input-phone-number" type="number" class="m-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input id="input-email" type="text" class="m-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Tổ bộ môn</label>
+                                    <div tabindex="0" class="m-select">
+                                        <span class="m-select__option--active"></span>
+                                        <img src="./assets/Icons/icon_down-arrow-small.svg" alt="">
+                                        <div class="m-select__wrap-option hide">
+                                            <div class="m-select__option">Tổ Toán - Tin</div>
+                                            <div class="m-select__option">Tổ Lý</div>
+                                            <div class="m-select__option">Tổ Hóa - Sinh</div>
+                                            <div class="m-select__option">Tổ Anh - Văn</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="managementBySubject" class="form-group">
+                                    <label title="Quản lý theo môn" for="">QL theo môn</label>
+                                    <div tabindex="0" class="multi-select">
+                                        <div class="multi-select__icon--show">
+                                        </div>
+                                        <ul class="tag-wrap">
+
+                                        </ul>
+                                        <div class="multi-select__wrap shadow hide">
+                                            <div class="multi-select__header">
+                                                <input type="checkbox" name="" class="m-checkbox">
+                                                <span>Tất cả</span>
+                                            </div>
+                                            <div class="multi-select__option-wrap">
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-1" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Toán</span>
+                                                </div>
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-2" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Lý</span>
+                                                </div>
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-3" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Hóa</span>
+                                                </div>
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-4" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Sinh</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="width: 100%;">
+                                    <label title="Quản lý kho, phòng" for="">QL kho, phòng</label>
+                                    <div tabindex="0" id="managementByDepartment" class="multi-select">
+                                        <div class="multi-select__icon--show">
+                                        </div>
+                                        <ul class="tag-wrap">
+                                        </ul>
+                                        <div class="multi-select__wrap shadow hide">
+                                            <div class="multi-select__header">
+                                                <input type="checkbox" name="" class="m-checkbox">
+                                                <span>Tất cả</span>
+                                            </div>
+                                            <div class="multi-select__option-wrap">
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-1" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Kho phòng chung</span>
+                                                </div>
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-2" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Phòng lý</span>
+                                                </div>
+                                                <div class="multi-select__option">
+                                                    <input value="multi-select-3" type="checkbox" name=""
+                                                        class="m-checkbox">
+                                                    <span>Phòng tin học</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="width: 40%;">
+                                    <input id="professionalSkill" type="checkbox" class="m-checkbox">
+                                    <label title="Trình độ nghiệp vụ quản lý thiết bị">Trình độ nghiệp vụ QLTB</label>
+                                </div>
+                                <div class="form-group" style="width: 20%;">
+                                    <input id="isWorking" type="checkbox" class="m-checkbox">
+                                    <label>Đang làm việc</label>
+                                </div>
+                                <div id="quit-work" class="form-group" style="width: 40%;">
+                                    <label for="">Ngày nghỉ việc</label>
+                                    <div class="m-input-date">
+                                        <!-- <input class="m-input" type="date" value="01/01/0001"> -->
+                                        <input class="m-input" type="date" data-date="" data-date-format="DD/MM/YYYY" value="2021-12-31">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modal-footer-add" class="modal__footer">
+                        <button class="btn btn-style2 modal__btn-close">Đóng</button>
+                        <button id="btn-save-add" class="btn btn-style1 hide">Lưu</button>
+                        <button id="btn-save-update" class="btn btn-style1 hide">Lưu</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-delete" class="modal hide">
+            <div class="flex-center">
+                <div class="modal__inner modal__inner--dlete">
+                    <img src="./assets/Icons/ic_X_2.png" class="modal-close cursor-pointer" alt="">
+                    <div id="modal-content-delte" class="modal-content">
+                        <span class="title">Thông báo</span>
+                        <div>Bạn có chắc chắn muốn xóa cán bộ giáo viên đang chọn không ?</div>
+                    </div>
+                    <div id="modal-footer-delete" class="modal__footer">
+                        <button class="btn btn-style2 modal__btn-close">Đóng</button>
+                        <button id="btn-accept-delete" class="btn btn-style1">Đồng ý</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toastify shadow flex">
+            <img src="" alt="">
+            <div class="toastify-content flex-col">
+                <span class="toastify-content__title title"></span>
+                <span class="toastify-content__message"></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script src="/js/jquery-3.6.1.min.js"></script>
+<script type="module" src="/js/toastify.js"></script>
+<script type="module" src="/js/modal.js"></script>
+<script type="module" src="/js/table.js"></script>
+<script type="module" src="/js/validate.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/sidebar.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/select-all.js"></script>
+<script src="/js/single-select.js"></script>
+<script src="/js/multi-select.js"></script>
+<script src="/js/date.js"></script>
+
+
+</html>

@@ -1,0 +1,48 @@
+.m-checkbox {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;;
+    border-radius: 4px;
+}
+.m-checkbox:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+.m-checkbox::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 20px;
+    width: 20px;
+    background-image: url("../../assets/Icons/ic_Checkbox_Inactive.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.m-checkbox:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 20px;
+    width: 20px;
+    background-image: url("../../assets/Icons/ic_Checkbox_Hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.m-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/Icons/ic_Checkbox_Active.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}

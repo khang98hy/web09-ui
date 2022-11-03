@@ -1,0 +1,60 @@
+.header-left {
+    display: flex;
+    color: black;
+    align-items: center;
+  }
+  
+  .header-left > img {
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+  }
+  
+  .header-right {
+    display: flex;
+    color: black;
+    align-items: center;
+  }
+  
+  .header-right .profile {
+    position: relative;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #dcdee6;
+  }
+  
+  .profile::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f5f6fa;
+  }
+  
+  .profile .profile-icon-more {
+      margin: 0 12px;
+  }
+  
+  .header-right .notification {
+    position: relative;
+  }
+  
+  .notification .icon-notification {
+    position: relative;
+    margin-right: 12px;
+    height: 32px;
+    width: 32px;
+  }
+  
+  .notification .new-notification {
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: var(--red);
+  }

@@ -1,0 +1,112 @@
+.table-wrap {
+  flex-grow: 1;
+  overflow-x: auto;
+}
+
+.data-table {
+  border-collapse: collapse;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.data-table thead tr {
+  width: calc(100% - 8px);
+  text-align: center;
+  font-weight: unset;
+}
+
+.data-table tbody {
+  height: 100%;
+  display: block;
+  overflow-y: scroll;
+}
+
+.data-table tr {
+  height: 40px;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.data-table tr td {
+  padding: 0 8px;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--hover-grid-line);
+}
+
+.data-table thead {
+  background-color: var(--header-grid-panel);
+}
+
+.data-table td+td,
+.data-table th+th {
+  border-left: 1px solid var(--line-grid-panel);
+}
+
+.data-table tbody tr {
+  border-top: 1px solid var(--line-grid-panel);
+}
+
+.data-table .column-checkbox {
+  width: 40px;
+  text-align: center;
+}
+
+.data-table tbody .column-name {
+  color: var(--main-color);
+}
+
+.w-100 {
+  width: 70px;
+}
+
+.w-150 {
+  width: 80px;
+}
+
+.w-70 {
+  width: 60px;
+}
+
+.data-table .column-teacher-name {
+  width: 100px;
+}
+
+.data-table .column-edit {
+  width: 50px;
+  text-align: center;
+}
+
+.column-teacher-code {
+  width: 70px;
+}
+
+.column-management-by-subject,
+.column-management-by-department {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.record__field--edit,
+.record__field--delete {
+  padding: 2px;
+  height: 28px;
+  width: 28px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.record__field--edit:hover {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+
+.record__field--delete:hover {
+  content: url("/assets/Icons/ic_Remove_Hover.png");
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}

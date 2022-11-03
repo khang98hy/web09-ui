@@ -1,0 +1,99 @@
+.multi-select {
+    position: relative;
+    min-height: 32px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--border-input);
+    padding-right: 28px;
+}
+.multi-select:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+
+.multi-select__icon--show {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-image: url("/assets/Icons/icon_down-arrow-small.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tag-wrap {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-picked {
+    background-color: #e0e0e0;
+    list-style: none;
+    height: 24px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 24px;
+    margin: 3px;
+    padding: 0 30px 0 4px;
+    position: relative;
+}
+
+.tag-picked__btn--close {
+    background-image: url(/assets/Icons/ic_X.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 2px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.multi-select__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    margin: 16px 16px 6px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.multi-select__option-wrap {
+    height: 96px;
+    overflow-y: auto;
+}
+
+.multi-select__wrap {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    top: calc(100% + 8px);
+    left: 0;
+    border-radius: 4px;
+    border: 1px solid var(--border-input);
+    padding-bottom: 6px;
+}
+
+.multi-select__option {
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+}
+
+.multi-select__option:hover {
+    background-color: var(--hover-grid-line);
+}
+
+.multi-select__header > span,
+.multi-select__option > span {
+    margin-left: 16px;
+}

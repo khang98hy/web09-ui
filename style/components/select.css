@@ -1,0 +1,45 @@
+.m-select {
+    position: relative;
+    height: 32px;
+    width: 200px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.m-select:focus{
+    outline-style: solid;
+    outline-color: var(--main-color);
+    outline-width: 1px;
+}
+.m-select > img {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+.m-select__wrap-option {
+    position: absolute;
+    padding: 8px 0;
+    width: 100%;
+    top: 35px;
+    left: 0;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: 2;
+}
+
+.m-select__option {
+    line-height: 28px;
+    padding-left: 16px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.m-select__option--active {
+    display: block;
+}
+
+.m-select__option:hover {
+    background-color: var(--hover-grid-line);
+}
